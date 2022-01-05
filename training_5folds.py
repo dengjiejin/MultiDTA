@@ -16,13 +16,13 @@ from gcnnII import GCNIIdense_model
 
 
 
-datasets = [['davis', 'kiba'][int(sys.argv[0])]]
+datasets = [['davis', 'kiba'][int(sys.argv[1])]]
 
-cuda_name = ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'][int(sys.argv[1])]
+cuda_name = ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'][int(sys.argv[2])]
 
-modeling = [GINConvNet, GATNet, GAT_GCN, GNNNet][int(sys.argv[2])]
+modeling = [GINConvNet, GATNet, GAT_GCN, GNNNet][int(sys.argv[3])]
 print('cuda_name:', cuda_name)
-fold = [0, 1, 2, 3, 4][int(sys.argv[3])]
+fold = [0, 1, 2, 3, 4][int(sys.argv[4])]
 cross_validation_flag = True
 print(int(sys.argv[3]))
 
