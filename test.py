@@ -87,13 +87,12 @@ def plot_density(Y, P, fold=0, dataset='davis'):
 
 
 if __name__ == '__main__':
-    # dataset = ['davis', 'kiba'][int(sys.argv[1])]  # dataset selection
-    dataset = ['davis', 'kiba'][1]  # dataset selection
+    dataset = ['davis', 'kiba'][int(sys.argv[1])]  # dataset selection
+  
     model_st = GNNNet.__name__
     print('dataset:', dataset)
 
-    # cuda_name = ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'][int(sys.argv[2])]  # gpu selection
-    cuda_name = ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'][0]  # gpu selection
+    cuda_name = ['cuda:0', 'cuda:1', 'cuda:2', 'cuda:3'][int(sys.argv[2])]  # gpu selection
     print('cuda_name:', cuda_name)
 
     TEST_BATCH_SIZE = 256
@@ -101,9 +100,7 @@ if __name__ == '__main__':
     results_dir = 'results'
 
     device = torch.device(cuda_name if torch.cuda.is_available() else 'cpu')
-    # model_file_name = 'models/model_' + model_st + '_' + dataset + '.model'
-    # model_file_name = 'models/model_GNNNet_davis_0.model'
-    model_file_name = 'models/model_GNNNet_kiba_0.model'
+    model_file_name = 'models/model_' + model_st + '_' + dataset + '.model'
     result_file_name = 'results/result_' + model_st + '_' + dataset + '.txt'
 
     model = GNNNet()
