@@ -29,6 +29,5 @@ This is to do the prediction with the models we trained. And this step is to rep
 **python test.py 0 0** <br>
 and the parameters are dataset selection, gpu selection.
 
-Beacuse our memory limitation, only 8 combinations were fitted for the best result. It is worth mentioning that if more model combinations were explored, there may be better results.
 
 
