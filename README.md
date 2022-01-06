@@ -2,7 +2,7 @@
 
 
 ## dependencies
-numpy == 1.17.4 <br>
+numpy == 1.19.4 <br>
 kreas == 2.4.3 <br>
 Pconsc4 == 0.4 <br>
 pytorch == 1.7.0 <br>
